@@ -122,9 +122,9 @@
 #	[[ ]]		: à mettre sinon erreur
 #	[[ () ]]	: gestion des priorités
 
-VAR_A=1
-VAR_B="bee"
-VAR_T="tee"
+# VAR_A=1
+# VAR_B="bee"
+# VAR_T="tee"
 
 # if [[ $VAR_A -eq 1 && ($VAR_B = "bee" || $VAR_T = "tee") ]] ; then
 #     echo ok
@@ -140,3 +140,38 @@ VAR_T="tee"
 # 	echo false
 # fi
 
+
+# ----------
+# case structure
+
+# CATEGORIE=3
+
+# case $CATEGORIE in
+# 	1) echo enfant ;;
+# 	2) echo ado ;;
+# 	3) echo majeur ;;
+# esac
+
+
+echo ""
+echo "EXERCICE"
+echo "--------"
+
+# change these variables
+NUMBER=16
+APPLES=16
+KING=LUIS
+# modify above variables
+# to make all decisions below TRUE
+if [ $NUMBER -gt 15 ] ; then
+  echo 1
+fi
+if [ $NUMBER -eq $APPLES ] ; then
+  echo 2
+fi
+if [[ ($APPLES -eq 12) || ("$KING" = "LUIS") ]] ; then
+  echo 3
+fi
+if [[ $(($NUMBER + $APPLES)) -le 32 ]] ; then
+  echo 4
+fi
